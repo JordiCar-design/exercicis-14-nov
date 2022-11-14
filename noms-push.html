@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    var noms = []
+noms.push("Jordi")
+noms.push("Eva")
+noms.push("Dani")
+noms.push({}) // Això és un objecte
+noms.push(35.5)
+noms.push("Pere")
+noms.push("Laura")
+
+// Escriure quants caràcters té cada nom
+// i el nom en un for i després en un forEach
+
+console.log(noms)
+
+for(
+    var posicioDelNom = 0; 
+    posicioDelNom < noms.length; 
+    posicioDelNom++ // Aquests 2 + són per comptar d'un en un
+    ){
+
+
+        // Agafem el valor (el nom ens l'inventem)
+        var nomActual = noms[posicioDelNom]
+        if (typeof(nomActual) == "string"){
+            console.log("És un string ")
+
+            //  Comptem els caràcters
+            var nombreDeCaracters = nomActual.length
+            console.log(
+                "El nom "
+                + nomActual
+                + " té "
+                + nombreDeCaracters
+                + " caràcters."
+
+            )
+        }else {
+            console.log(" és una altra cosa")
+        }
+
+
+    }
+
+    console.clear
+        /*
+
+        var esUnaCadenaDeText = false
+        console.log(typeof(nomActual)) nomActual */
+
+    noms.forEach((el)=>{
+        if(typeof(el)=="string"){
+            console.log("El nom " + el + " té " + el.length + " caràcters:")
+        }
+
+    })
+
+    var suma = (a,b)=>{
+        return a+b
+    }
+
+
+
+
+    noms.forEach(function(el, pos, arr){
+
+    })
+
+
+    noms.forEach((el, pos, arr)=>{
+        console.log(el)
+
+    })
+
+
+</script>
+</html>

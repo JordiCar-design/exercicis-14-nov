@@ -60,8 +60,95 @@ else{
 // entre 36.5 i 38 "té força febre"
 // més de 38 "té molta febre"
 
+febre > 35.0 && febre < 36.5
+// això és OR || (altgr + 1)
+// això és AND &&
+
+var febre = 36.7
+
+if(febre < 35){
+    console.log("Perill febre menor de 35")
+}
+else if (febre > 35 && febre < 36.5){
+    console.log("No té febre")
+}
+else if (febre > 36.5 && febre < 38){
+    console.log("té força febre")
+}
+else{
+    console.log("té molta febre")
+}
+
+// Ara fem tot això de dalt (lo de la febre) com a funció
+// amb un paràmetre d'entrada (la febre) i que imprimeixi 
+// a la cònsola els textes anteriors
+
+function calcularFebre(laFebre){
+
+    if(laFebre < 35){
+        console.log("Perill febre menor de 35")
+    }
+    else if (laFebre > 35 && laFebre < 36.5){
+        console.log("No té febre")
+    }
+    else if (laFebre > 36.5 && laFebre < 38){
+        console.log("té força febre")
+    }
+    else{
+        console.log("té molta febre")
+    }
+
+}
+
+// El que hem fet en la funció de dalt és canviar 
+// la variable febre per la funció laFebre
+
+calcularFebre(30)
+calcularFebre(35.7)
+calcularFebre(37.8)
+calcularFebre(41)
+
+// Això de sota és un array, que va recorrent 
+// cada un dels valors que hi ha entre claudàtors
+
+var pacients = [34.5,42.3,39.0,36.7]
+
+// Ho farem amb la funció loop (anar fent voltes) de for
+// Com que li marquem que la variable de posició és = a 0
+// comença a comptar des de 0; si li poséssim 1 començaria des d'1
+// i si volguéssim que comptés un sí i un no, en compte de dos ++ 
+// hauríem de posar +1 o -1
+
+for(var posicio=0; posicio < pacients.length; posicio++){
+    // Agafem el valor de la posició actual
+    var febrePacient = pacients[posicio]
+    console.log(
+        "La febre del pacient "
+        + posicio
+        + " és "
+        + febrePacient
+    )
+    calcularFebre(febrePacient)
+}
+
+// Array (pacient)
+pacients.forEach(calcularFebre)
+
+pacients.forEach(
+    function(laFebreDelPacient){
+        calcularFebre(laFebreDelPacient)
+    }
+)
+
+//  var pacients = [34.5,42.3,39.0,36.7]
+
+console.clear()
+pacients.forEach(
+    function(elValor, posicio, el_array){
+    calcularFebre(elValor)
+    }
+)
+
 </script>
-
-
 
 </html>
