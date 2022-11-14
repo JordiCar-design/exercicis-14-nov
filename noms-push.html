@@ -139,7 +139,13 @@ for(
 
     pacient2.forEach((pacient,i,pacients)=>{
         console.log("Estem mirant el pacient ", pacient.nom)
+        console.log("El pacient té la febre a ", pacient.febre)
         console.log("Hi ha ", pacients.length,"pacients.")
+        var seguentPacient = pacients[i+1]
+        if(seguentPacient){ // Amb l'if ja no dóna error perquè 
+        // s'ha acabat el nombre de pacients
+        console.log("El seguent pacient és ", seguentPacient.nom)
+    }
 
     })
 
