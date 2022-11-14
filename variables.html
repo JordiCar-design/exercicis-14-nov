@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- codi js -->
+</head>
+<body>
+    <!-- codi js -->
+    <h1>Variables</h1>
+    <!--  codi js -->
+</body>
+<!--  codi js -->
+<script>
+    // Crear dues variables que tinguin cada una un número enters diferents
+    var enter1 = 10
+    var enter2 = 20
+
+    
+    //  Dues variables que tinguin dos decimals diferents
+    var decimal1 = 3.45
+    var decimal2 = 5.6
+
+    // Fer servir console log per veure la 
+    // del parell de variables
+    console.log("els enters sumen", enter1+enter2)
+
+    // El console.log es pot fer directe, com en el cas de dalt,
+    // o bé creant una nova variable, com en el cas de sota
+
+    var sumaDecimals = decimal1 + decimal2
+    console.log("els decimals sumen", sumaDecimals)
+
+    //  Fer una funció - 1 paràmetre d'entrada o d'argument
+    //  Ens diu quin tipus és i imprimeix el valor de l'argument
+
+    function tipusDeVariable(entrada){
+        console.log(
+            "La variable d'entrada és del tipus "
+            + typeof(entrada)
+            + " i té el valor "
+            + entrada
+
+        )
+
+    }
+
+    // aquí invoquem la funció
+    tipusDeVariable("hola")
+    tipusDeVariable(enter1)
+    tipusDeVariable(decimal1)
+    tipusDeVariable()
+    tipusDeVariable({}) // això és un objecte buit per les {}
+    tipusDeVariable([]) // això és array buit pel []
+
+// Fer 4 funcions, sumar, restar, multiplicar i dividir
+//  i provar-les
+
+function suma(a,b){
+    return a + b
+
+}
+
+function resta(a,b){
+    return a - b
+}
+
+function multiplicacio(a,b){
+    return a + b
+}
+
+function dividir(a,b){
+    return a / b
+}
+
+// Fer una funció per sumar 3 valors
+
+function suma3(a,b,c){
+    return a + b + c
+}
+
+console.log(suma)
+
+function resta3(a,b,c){
+    return a - b - c
+}
+
+function multiplicacio3(a,b,c){
+    return a * b * c
+}
+
+function dividir3(a,b,c){
+    return a / b / c
+}
+
+console.log("suma ", suma(enter1, enter2))
+
+
+var laResta = resta(enter1, enter2)
+console.log("rest", laResta)
+
+// Aquí li diem que multipliqui per 10
+
+var resultat = multiplicacio(enter1,10)
+console.log(resultat)
+
+console.log(dividir(100,20))
+
+console.log(suma3(12,11,13))
+var resultat = suma(suma(12,11), 13)
+
+function suma5(a=0,b=0){
+    return a + b
+}
+
+
+
+</script>
+</html>
