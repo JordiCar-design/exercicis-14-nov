@@ -122,6 +122,28 @@ for(
     })
 
     console.log(sumatori2)
+
+    console.clear()
+
+    var pacient2 = []
+
+    pacient2.push({
+        nom:"Jordi",
+        febre: 35
+    })
+
+    pacient2.push({nom:"Laura",febre:36.5})
+    pacient2.push({nom:"Pere",febre:39.5})
+
+    console.log(pacient2)
+
+    pacient2.forEach((pacient,i,pacients)=>{
+        console.log("Estem mirant el pacient ", pacient.nom)
+        console.log("Hi ha ", pacients.length,"pacients.")
+
+    })
+
+
 </script>
 
 </html>
