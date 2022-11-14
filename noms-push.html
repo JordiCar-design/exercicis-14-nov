@@ -80,10 +80,47 @@ for(
 
 
     noms.forEach((el, pos, arr)=>{
-        console.log(el)
+        console.log("L'element és " + el + " la posició és "
+        + pos + " i l'array té " + arr.length + "elements"
+        )
 
     })
 
+  
+    // Això és perquè 
 
+    var sumatori = 0
+
+      // Això de sota és un array,, per això hi ha els []
+
+    var excel = [
+        [10,12,14,1,20,3],
+        [2,1,19,11,2,32],
+        [40,12,200,2,42,31],
+    ]
+
+    for(var fila = 0; fila < excel.length; fila++){
+        // Recuperem l'element actual
+        var el = excel[fila]
+        console.log(el)
+        for(var columna = 0; columna < el.length; columna++){
+            var valor = el[columna]
+            sumatori = sumatori + valor
+
+        }
+    }
+
+    console.log(sumatori)
+
+    console.clear
+
+    var sumatori2 = 0
+    excel.forEach(fila=>{
+        fila.forEach(columna=>{
+            sumatori2 += columna
+        })
+    })
+
+    console.log(sumatori2)
 </script>
 </html>
