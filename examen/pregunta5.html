@@ -1,0 +1,31 @@
+<!-- 
+    Pregunta 5
+    1. Fer una funció amb un paràmetre d'entrada (text)
+    2. Fer que la funció torni el nombre de caràcters
+    d'aquesta cadena de text
+    3. Mostrar-ho per pantalla en varis exemples
+ -->
+
+ <script>
+
+    function nombreDeCaracters(text){
+        // return text.length
+        var longitudDelText = text.length
+        return longitudDelText
+
+    }
+
+    var nombreDeCaracters2 = (text)=>text.length
+
+    var nombreDeCaracters3 = (text)=>{
+        return text.length
+    }
+
+    var x = nombreDeCaracters("La cadena de text")
+    console.log(x)
+
+    console.log(nombreDeCaracters("Jordi"))
+    console.log(nombreDeCaracters("Eva"))
+    console.log(nombreDeCaracters(""))
+    console.log(nombreDeCaracters("Una cadena de text molt llarga"))
+ </script>

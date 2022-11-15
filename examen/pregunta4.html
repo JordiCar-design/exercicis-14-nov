@@ -1,0 +1,34 @@
+<!-- 
+    Pregunta 4
+    1. Fer una funció que tingui un paràmetre d'entrada (dollars)
+    i torni el valor en euros (multiplicar per 1.2)
+    2. Mostrar el resultat per la cònsola
+ -->
+
+ <script>
+
+    /*var a = 1
+    var b = 1.2  Així NO s'ha de fer */
+
+    function convertirDollarsAEuros(numeroDeDollars){
+        return numeroDeDollars * 1.2
+    }
+
+    console.log(convertirDollarsAEuros(100))
+    var euros = convertirDollarsAEuros(200)
+    console.log(euros)
+
+
+    // Aquesta de sota és una altra manera de fer-ho 
+
+    function convertDE(dollars, ratio=1.2){
+        return dollars * ratio
+    }
+
+    
+    // Això és un més a més 
+    
+    console.log(convertDE(100))
+    console.log(convertDE(100, 0.9))
+
+ </script>
