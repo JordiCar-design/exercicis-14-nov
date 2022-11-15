@@ -79,7 +79,7 @@
         nom:"Girona",
         temperatures:[21,20,19,21,26,25,24,22,19,22,19,17,15],
         temperaturaMitjana(){
-            // Recórrer l'array
+            // Recorrer l'array
             var total = 0
             var nombreDeTemperatures = 0
             this.temperatures.forEach(
@@ -87,34 +87,68 @@
                     // Acumular en una variable el total
                     // (suma de tots els elements)
                     total += temperatura
-                // El nombre total d'elements
+                    // El nombre total d'elements
                     nombreDeTemperatures++
-
                 }
             )
-            // retornar la suma/nombre total d'elements
+            // retornar és la suma/nombre total d'elements
             return total / nombreDeTemperatures
-
-            var temperaturaMitjana = ciutat.temperaturaMitjana()
-            var nomDeLaCiutat = ciutat.nom
-
-
-
-            console.log("A la ciutat de "
-            + nomDeLaCiutat
-            +" hi ha una temperatura mitjana de "
-            + temperaturaMitjana
-            + " graus"
-
-    )
-
-
-
-
-
         }
     }
 
+    // "A la ciutat de Girona hi ha una temperatura mitjana de X graus"
+
+    var temperaturaMitjana = ciutat.temperaturaMitjana()
+    var nomDeLaCiutat = ciutat.nom
+
+    console.log("A la ciutat de "
+        + nomDeLaCiutat
+        + " hi ha una temperatura mitjana de "
+        + temperaturaMitjana
+        + " graus"
+    )
+    
+
+    var carpeta = {
+        nom:"projectes",
+        elements:[
+            {nom:"dia-18",tipus:"carpeta",arxius:12,gb:20},
+            {nom:"dia-19",tipus:"carpeta",arxius:2,gb:21},
+            {nom:"dia-20",tipus:"carpeta",arxius:32,gb:1},
+            {nom:"dia-21",tipus:"carpeta",arxius:7,gb:10},
+            {nom:"dia-22",tipus:"carpeta",arxius:219,gb:7},
+        ],
+            nombreDeCarpetes(){
+                console.log(this.elements)
+                return this.elements.length
+            },
+            nombreArxius(){
+                console.log("estic dins de nombre d'arxius")
+                var totalArxius = 0
+                this.elements.forEach(subcarpeta=>{
+                    console.log(subcarpeta)
+                    totalArxius += subcarpeta.arxius
+                })
+                console.log("El total d'arxius és ", totalArxius)
+                return totalArxius
+
+            },
+            tamanyTotalArxius(){
+                var totalGB = 0
+                this.elements.forEach(function(subcarpeta){
+                    totalGB += subcarpeta.gb
+                })
+                return totalGB
+
+
+            },
+            tamanyMitjaArxiu(){
+                return this.tamanyTotalArxius()/this.nombreArxius()
+
+            }
+        } 
+        
 
 
 </script>
+
